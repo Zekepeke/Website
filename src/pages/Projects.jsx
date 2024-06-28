@@ -1,8 +1,9 @@
-import {React, Suspense} from 'react'
-import {projects} from '../constants'
-import { Link } from 'react-router-dom'
-import { arrow } from '../assets/icons'
-import {CTA, CanvasLoader} from '../components'
+import {React, Suspense} from 'react';
+import {projects} from '../constants';
+import { Link } from 'react-router-dom';
+import { arrow } from '../assets/icons';
+import {CTA, CanvasLoader} from '../components';
+import { BallCanvas } from '../models';;
 
 const Projects = () => {
   return (
@@ -24,14 +25,21 @@ const Projects = () => {
           {projects.map((project) => (
             <div className='lg:w-[400px] w-full' key={project.name}>
               <div className='block-container w-12 h-12'>
-                <div className={`btn-back rounded-xl ${project.theme}`}/>
+                <BallCanvas 
+                  icon={project.imageUrl}  
+                  color={project.theme}
+                  scale={3}
+                />
+                
+                {/*<div className={`btn-back rounded-xl ${project.theme}`}/>
                 <div className='btn-front rounded-xl flex justify-center items-center'>
                   <img
                   src ={project.iconUrl}
                   alt='threads'
                   className='w-1/2 h-1/2 object-contain'
                   />
-                </div>
+
+                </div>*/}
               </div>
 
               <div className='mt-5 flex flex-col'>

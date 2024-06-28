@@ -157,36 +157,36 @@ export const experiences = [
 
 export const projects = [
     {
-        iconUrl: zekeshot,
-        theme: 'btn-back-red',
+        imageUrl: zekeshot,
+        theme: '#ff9068',
         name: "Pygame 'Zekeshot'",
         description: 'Developed a 2D arcade-style shooting game where players control a character, shoot bullets to reach targets, and manage limited ammunition.',
         link:'https://github.com/Zekepeke/Zekeshot'
     },
     {
-        iconUrl: nn,
-        theme: 'btn-back-green',
+        imageUrl: nn,
+        theme: '#adfda2',
         name: 'Neural Network made from scratch',
         description: 'Developed a neural network using NumPy and pandas to classify digits from the MNIST dataset, performing forward and backward propagation, parameter updates, and accuracy evaluation.',
         link: 'https://github.com/Zekepeke/First-Nueral-Network/tree/main',
     },
     {
-        iconUrl: cnn,
-        theme: 'btn-back-blue',
+        imageUrl: cnn,
+        theme: '#0061ff',
         name: 'Object Detector',
         description: 'Developed an object detector using YOLOv8, a convolutional neural network (CNN), to accurately identify and locate items in a custom dataset.',
         link: 'https://github.com/Zekepeke/Object-Detector',
     },
     {
-        iconUrl: jordan,
-        theme: 'btn-back-black',
+        imageUrl: jordan,
+        theme: '#f89b29',
         name: 'Shoe Website',
         description: 'Developed an e-commerce website for a client to sell shoes, featuring product listings, detailed descriptions, customer reviews, and secure online payment processing.',
         link: 'https://github.com/Zekepeke/Shoe-website',
     },
     {
-        iconUrl: summary,
-        theme: 'btn-back-yellow',
+        imageUrl: summary,
+        theme: '#ff0f7b',
         name: 'AI Summarizer Application',
         description: 'App that utilizes AI to generate precise and informative summaries from verbose text content or blogs.',
         link: 'https://github.com/Zekepeke/Summarizer-App',

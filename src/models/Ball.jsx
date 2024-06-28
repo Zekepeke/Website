@@ -12,15 +12,20 @@ import {CanvasLoader} from "../components";
 
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
+  const themeColor = props.theme;
+  const size = props.scale;
 
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.7]} intensity={5} />
-      <mesh castShadow receiveShadow scale={2.5}>
+      <mesh 
+        castShadow receiveShadow 
+        scale={size}
+      >
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
-          color='#FCFBF4'
+          color={themeColor}
           polygonOffset
           polygonOffsetFactor={-5}
           flatShading
@@ -37,7 +42,7 @@ const Ball = (props) => {
   );
 };
 
-const BallCanvas = ({ icon }) => {
+const BallCanvas = ({ icon, color, scale }) => {
   return (
     <Canvas
       frameloop='demand'
@@ -46,7 +51,12 @@ const BallCanvas = ({ icon }) => {
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
-        <Ball imgUrl={icon} />
+        <Ball 
+          imgUrl={icon} 
+          theme={color}
+          scale={scale}
+    
+        />
       </Suspense>
 
       <Preload all />

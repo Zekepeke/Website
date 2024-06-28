@@ -31,26 +31,13 @@ const About = () => {
           >
             {skills.map((skill) => (
               <div className='w-28 h-28' key={skill.name}>
-                <BallCanvas icon={skill.imageUrl} />
+                <BallCanvas 
+                  icon={skill.imageUrl} 
+                  scale={2.5}
+                />
               </div>
             ))}
           </div>
-
-          {/*<div className = "mt-16 flex flex-wrap gap-12">
-            {skills.map((skill) => (
-              <div className = "block-container w-20 h-20" key={skill.name}>
-                <div className = "btn-back rounded-xl" />
-                <div className = "btn-front rounded-x; flex justify-center items-center">
-                  <img
-                    src = {skill.imageUrl}
-                    alt = {skill.name}
-                    className = "w-1/2 h-1/2 object-contain"
-                  />
-                </div>
-              </div>
-            ))}
-
-          </div>*/}
 
         </div>
 
